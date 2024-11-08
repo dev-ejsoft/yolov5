@@ -24,6 +24,8 @@ import time
 from copy import deepcopy
 from datetime import datetime, timedelta
 from pathlib import Path
+from pathlib import Path
+pathlib.PosixPath = pathlib.WindowsPath
 import os
 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 try:
