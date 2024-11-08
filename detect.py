@@ -33,8 +33,12 @@ import csv
 import os
 import platform
 import sys
+# from pathlib import Path
+import pathlib
 from pathlib import Path
-
+os_name = platform.system()
+if(os_name == "Windows"):
+    pathlib.PosixPath = pathlib.WindowsPath
 import torch
 
 FILE = Path(__file__).resolve()
